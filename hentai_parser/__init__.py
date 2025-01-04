@@ -1,1 +1,1 @@
-from . import Hentai_parser
+from .hentai_parser import Hentai_parser

@@ -5,7 +5,8 @@ from pathlib import Path
 
 class Hentai_parser:
     def __init__(self) -> None:
-        with open("data/tags.json", "r", encoding="utf-8") as f:
+        json_file = Path(__file__).parent / "data/tags.json"
+        with json_file.open("r", encoding="utf-8") as f:
             self.tags_dict = json.loads(f.read())
 
     def parse(self, filename: str = "") -> str:
